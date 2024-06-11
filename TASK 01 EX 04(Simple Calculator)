@@ -1,0 +1,29 @@
+#Simple Calculator
+def add(input_1,input_2):
+    return input_1+input_2
+    
+def subtract(input_1,input_2):
+    return input_1-input_2
+    
+def multiply(input_1,input_2):
+    return input_1*input_2
+    
+def divide(input_1,input_2):
+    return input_1/input_2
+
+input_1=input("ENTER THE FIRST NUMBER:")
+input_2=input("ENTER THE SECOND NUMBER: ")
+#MAKING THE INPUTS AS NUMBERS
+input_1=float(input_1)
+input_2=float(input_2)
+Operator=input("Please enter the operator(+,-,*,/):")
+if Operator=='+' :
+    print("THE RESULT IS:",add(input_1,input_2))
+elif Operator=='-' :
+    print("THE RESULT IS :",subtract(input_1,input_2))
+elif Operator=='*':
+    print("THE RESULT IS:",multiply(input_1,input_2))
+elif Operator=='/':
+    print("THE RESULT IS:",divide(input_1,input_2))
+
+
