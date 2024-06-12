@@ -1,0 +1,26 @@
+def are_anagrams(str1, str2):
+    # Remove spaces and punctuation, and convert to lowercase
+    clean_str1 = ''.join(char.lower() for char in str1 if char.isalnum())
+    clean_str2 = ''.join(char.lower() for char in str2 if char.isalnum())
+    
+    # Sort the strings
+    sorted_str1 = sorted(clean_str1)
+    sorted_str2 = sorted(clean_str2)
+    
+    # Check if the sorted strings are equal
+    return sorted_str1 == sorted_str2
+
+def main():
+    try:
+        string1 = input("Enter the first string: ")
+        string2 = input("Enter the second string: ")
+        
+        if are_anagrams(string1, string2):
+            print("The two strings are anagrams.")
+        else:
+            print("The two strings are not anagrams.")
+    except Exception as e:
+        print("An error occurred:", e)
+
+if __name__ == "__main__":
+    main()
