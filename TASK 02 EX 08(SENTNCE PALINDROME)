@@ -1,0 +1,13 @@
+def is_palindrome(sentence):
+    # Remove spaces and punctuation, and convert to lowercase
+    clean_sentence = ''.join(char.lower() for char in sentence if char.isalnum())
+    
+    # Check if the clean sentence is equal to its reverse
+    return clean_sentence == clean_sentence[::-1]
+
+def main():
+    sentence = input("Enter a sentence: ")
+    if is_palindrome(sentence):
+        print("The given sentence is a palindrome.")
+    else:
+        print("The given sentence is not a palindrome.")
