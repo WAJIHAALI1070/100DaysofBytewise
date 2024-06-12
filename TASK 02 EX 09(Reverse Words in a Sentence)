@@ -1,0 +1,17 @@
+def reverse_sentence(sentence):
+    # Split the sentence into words
+    words = sentence.split()
+    
+    # Reverse the order of words
+    reversed_sentence = ' '.join(reversed(words))
+    
+    return reversed_sentence
+
+# Prompt the user to enter a sentence
+sentence = input("Enter a sentence: ")
+
+# Reverse the order of words in the sentence
+reversed_sentence = reverse_sentence(sentence)
+
+# Print the reversed sentence
+print("Reversed sentence:", reversed_sentence)
