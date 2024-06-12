@@ -1,0 +1,13 @@
+n=int(input("enter the number:"))
+if n == 1:
+    print(n)
+elif n>1:
+    for i in range(2,n):
+        if n%i == 0:
+            print("not a prime number",n)
+            break
+    else:
+            print("a prime number", n)
+else:
+    print("not a prime number",n)
+    
