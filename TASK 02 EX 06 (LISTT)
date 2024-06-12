@@ -1,0 +1,5 @@
+# Using list comprehension to create a list of squares of the first 10 integers
+squares = [i ** 2 for i in range(1, 11)]
+
+# Printing the list of squares
+print(squares)
