@@ -1,0 +1,60 @@
+# Definition for singly-linked list node
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reverse_linked_list(head):
+    prev = None
+    current = head
+
+    while current:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+    
+    return prev  # prev is the new head of the reversed list
+
+# Function to create a linked list from user input
+def create_linked_list_from_input():
+    input_str = input("Enter the elements of the linked list, separated by spaces: ")
+    elements = list(map(int, input_str.split()))
+    
+    # Create the linked list from the elements
+    if not elements:
+        return None
+    
+    head = ListNode(elements[0])
+    current = head
+    for val in elements[1:]:
+        new_node = ListNode(val)
+        current.next = new_node
+        current = new_node
+    
+    return head
+
+# Function to print the linked list for verification
+def print_linked_list(head):
+    current = head
+    while current:
+        print(current.val, end=" -> ")
+        current = current.next
+    print("None")
+
+# Main program
+if __name__ == "__main__":
+    # Create a linked list from user input
+    head = create_linked_list_from_input()
+
+    if head:
+        print("\nOriginal linked list:")
+        print_linked_list(head)
+
+        # Reverse the linked list
+        reversed_head = reverse_linked_list(head)
+
+        print("\nReversed linked list:")
+        print_linked_list(reversed_head)
+    else:
+        print("Empty linked list input.")
