@@ -1,0 +1,35 @@
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+    
+    # Sort intervals based on the start time
+    intervals.sort(key=lambda x: x[0])
+    
+    merged = []
+    for interval in intervals:
+        # If the merged list is empty or if the current interval does not overlap with the last interval in merged
+        if not merged or merged[-1][1] < interval[0]:
+            merged.append(interval)
+        else:
+            # There is overlap, merge the intervals
+            merged[-1][1] = max(merged[-1][1], interval[1])
+    
+    return merged
+
+def main():
+    # Input the number of intervals
+    n = int(input("Enter the number of intervals: "))
+    
+    intervals = []
+    for i in range(n):
+        start, end = map(int, input(f"Enter interval {i+1} (start end): ").split())
+        intervals.append([start, end])
+    
+    # Call merge_intervals function to merge overlapping intervals
+    merged_intervals = merge_intervals(intervals)
+    
+    # Print the merged intervals
+    print("Merged Intervals:", merged_intervals)
+
+if __name__ == "__main__":
+    main()
