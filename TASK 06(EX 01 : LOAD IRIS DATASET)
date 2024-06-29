@@ -1,0 +1,28 @@
+# Importing necessary libraries from scikit-learn
+from sklearn.datasets import load_iris
+import pandas as pd
+
+# Load the Iris dataset from scikit-learn
+# The load_iris function returns a dictionary-like object with all the data and meta-data
+iris = load_iris()
+
+# Explanation:
+# iris.data contains the feature values (sepal length, sepal width, petal length, petal width)
+# iris.target contains the target values (species of iris plants)
+# iris.feature_names contains the names of the features
+# iris.target_names contains the names of the target classes (species names)
+
+# Converting the dataset to a Pandas DataFrame for better visualization and manipulation
+# We are creating a DataFrame with the feature data and adding the feature names as column headers
+df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+
+# Adding the target data (species) to the DataFrame
+# We are adding a new column 'species' to the DataFrame with the target values
+df['species'] = iris.target
+
+# Print the first 5 rows of the DataFrame
+print(df.head())
+
+# Explanation:
+# The head() method of the DataFrame prints the first 5 rows by default.
+# This allows us to see a quick overview of the dataset, including feature values and corresponding species.
