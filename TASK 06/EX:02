@@ -1,1 +1,40 @@
 #Implement a function that takes a dataset and returns the number of features and samples.
+from sklearn.datasets import load_iris
+import pandas as pd
+
+def get_dataset_info(dataset):
+    """
+    This function takes a dataset and returns the number of features and samples.
+
+    Parameters:
+    dataset (sklearn.utils.Bunch or pandas.DataFrame): The dataset to analyze.
+
+    Returns:
+    tuple: A tuple containing the number of features and the number of samples.
+    """
+    # Check if the input is a pandas DataFrame
+    if isinstance(dataset, pd.DataFrame):
+        # Number of samples (rows)
+        num_samples = dataset.shape[0]
+        # Number of features (columns) excluding the target column
+        num_features = dataset.shape[1] - 1 if 'species' in dataset.columns else dataset.shape[1]
+    else:
+        # If the dataset is not a DataFrame, we assume it's a Bunch object from sklearn
+        num_samples = dataset.data.shape[0]
+        num_features = dataset.data.shape[1]
+
+    return num_features, num_samples
+
+# Load the Iris dataset from scikit-learn
+iris = load_iris()
+
+# Convert the dataset to a DataFrame for demonstration
+df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+df['species'] = iris.target
+
+# Use the function to get the number of features and samples
+features, samples = get_dataset_info(df)
+
+# Print the results
+print(f"Number of features: {features}")
+print(f"Number of samples: {samples}")
