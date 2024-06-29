@@ -1,0 +1,18 @@
+#Exercise 9: Load a CSV file into a Pandas DataFrame and print summary statistics for each column.
+import numpy as np
+
+# Generate 1350 random numbers
+random_numbers = np.random.rand(1350)
+
+# Print the first few numbers to inspect
+print("First 10 random numbers:")
+print(random_numbers[:10])  # Print the first 10 numbers
+
+# Compute mean, median, and standard deviation
+mean = np.mean(random_numbers)
+median = np.median(random_numbers)
+std_dev = np.std(random_numbers)
+
+print(f"\nMean: {mean}")
+print(f"Median: {median}")
+print(f"Standard Deviation: {std_dev}")
