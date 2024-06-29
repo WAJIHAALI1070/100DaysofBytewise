@@ -1,0 +1,8 @@
+#Exercise 8: Generate a 5x5 matrix of random numbers and print it.
+import numpy as np
+
+# Generate a 5x5 matrix of random numbers
+matrix = np.random.rand(5, 5)
+
+print("Generated Matrix:")
+print(matrix)
