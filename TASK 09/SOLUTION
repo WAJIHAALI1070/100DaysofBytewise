@@ -1,0 +1,53 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets, linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+
+# Load the Boston Housing dataset
+boston = datasets.load_boston()
+X = boston.data
+y = boston.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create linear regression object
+lr_model = linear_model.LinearRegression()
+
+# Train the model using the training sets
+lr_model.fit(X_train, y_train)
+
+# Make predictions using the testing set
+y_pred = lr_model.predict(X_test)
+
+# The coefficients
+print('Coefficients: \n', lr_model.coef_)
+# The mean squared error
+print('Mean squared error: %.2f' % mean_squared_error(y_test, y_pred))
+# The coefficient of determination: 1 is perfect prediction
+print('Coefficient of determination (R^2): %.2f' % r2_score(y_test, y_pred))
+
+# Plot outputs
+plt.scatter(y_test, y_pred, color='black')
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'k--', lw=2)
+plt.xlabel('Actual')
+plt.ylabel('Predicted')
+plt.title('Actual vs. Predicted Prices')
+plt.show()
+
+# Scatter plot of the predicted vs. actual values
+plt.figure(figsize=(10, 6))
+plt.scatter(range(len(y_test)), y_test, color='blue', alpha=0.5, label='Actual')
+plt.scatter(range(len(y_test)), y_pred, color='red', alpha=0.5, label='Predicted')
+plt.xlabel('Sample Index')
+plt.ylabel('Price')
+plt.title('Actual vs. Predicted Prices Scatter Plot')
+plt.legend()
+plt.show()
+
+# Interpret the coefficients of the linear regression model
+features = boston.feature_names
+coefficients = lr_model.coef_
+for feature, coef in zip(features, coefficients):
+    print(f'{feature}: {coef:.2f}')
