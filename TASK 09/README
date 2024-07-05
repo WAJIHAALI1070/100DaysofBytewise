@@ -1,0 +1,9 @@
+Exercise: Load a dataset (e.g., the Boston Housing dataset from Scikit-Learn) and prepare the data for linear regression (e.g., split into training and testing sets).
+Exercise: Implement linear regression using Scikit-Learn. Fit the model to the training data.
+Exercise: Predict the target variable for the test set using the fitted linear regression model.
+Exercise: Calculate the Mean Squared Error (MSE) of the linear regression model on the test set.
+    Hint: Use `mean_squared_error` from `sklearn.metrics`.
+Exercise: Calculate the R-squared value of the linear regression model on the test set.
+Exercise: Plot the regression line along with the actual data points to visually assess the model's performance.
+Exercise: Evaluate the model's performance by comparing the predicted values with the actual values. Create a scatter plot of the predicted vs. actual values.
+Exercise: Interpret the coefficients of the linear regression model. Explain the impact of each feature on the target variable.
