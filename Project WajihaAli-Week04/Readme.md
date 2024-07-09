@@ -89,7 +89,7 @@ The predictive model demonstrates effectiveness in estimating wine quality based
 
 - **Medium Article**: [Predicting Wine Quality Using Machine Learning - A Step-by-Step Guide](https://medium.com/@neurocybex/predicting-wine-quality-using-machine-learning-a-step-by-step-guide-aca994bbc128)
 - **Dataset**: [Wine Quality Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv)
-- **GitHub Repository**: [Your GitHub Repository Link]
+- **GitHub Repository**: [Predicting Wine Quality Based on Chemical Properties](https://github.com/WAJIHAALI1070/100DaysofBytewise/tree/main/Project%20WajihaAli-Week04)
 
 ## About the Author
 Wajiha Ali is a passionate data enthusiast and electrical engineering student with a keen interest in machine learning and data science. Connect with her on [GitHub](https://github.com/WAJIHAALI1070) for more projects and collaborations.
