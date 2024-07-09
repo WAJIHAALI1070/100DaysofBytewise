@@ -39,7 +39,7 @@ Visualize the distribution of wine quality using a count plot and explore relati
     plt.title('Wine Quality Distribution')
     plt.show()
 
-### Corelation Heatman
+### Corelation Heatmap
 
     plt.figure(figsize=(12, 8))
     sns.heatmap(wine_data.corr(), annot=True, fmt='.2f', cmap='coolwarm')
