@@ -33,13 +33,13 @@ Install the required libraries using:
 ### Data Visualization
 Visualize the distribution of wine quality using a count plot and explore relationships between features using a correlation heatmap.
 
-# Distribution of Wine Quality
+### Distribution of Wine Quality
 
     sns.countplot(x='quality', data=wine_data)
     plt.title('Wine Quality Distribution')
     plt.show()
 
-# Corelation Heatman
+### Corelation Heatman
 
     plt.figure(figsize=(12, 8))
     sns.heatmap(wine_data.corr(), annot=True, fmt='.2f', cmap='coolwarm')
