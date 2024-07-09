@@ -92,8 +92,7 @@ The predictive model demonstrates effectiveness in estimating wine quality based
 - **GitHub Repository**: [Your GitHub Repository Link]
 
 ## About the Author
-Wajiha Ali is a passionate data enthusiast and electrical engineering student with a keen interest in machine learning and data science. Connect with him on [GitHub](https://github.com/yourgithubusername) for more projects and collaborations.
-Learn more about this project on [Predicting Wine Quality Using Machine Learning: A Step-by-Step Guide](https://medium.com/@neurocybex/predicting-wine-quality-using-machine-learning-a-step-by-step-guide-aca994bbc128)
+Wajiha Ali is a passionate data enthusiast and electrical engineering student with a keen interest in machine learning and data science. Connect with her on [GitHub](https://github.com/WAJIHAALI1070) for more projects and collaborations.
 
 
 ## Call to Action
