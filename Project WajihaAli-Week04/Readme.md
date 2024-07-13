@@ -3,6 +3,17 @@
 ## Overview
 This project focuses on predicting wine quality based on its chemical properties using machine learning techniques. It employs linear regression to model the relationship between various chemical features and wine quality ratings.
 
+## About the Author
+Wajiha Ali is a passionate data enthusiast and electrical engineering student with a keen interest in machine learning and data science. Connect with her on [GitHub](https://github.com/WAJIHAALI1070) for more projects and collaborations.
+## Additional Resources
+
+- **Medium Article**: [Predicting Wine Quality Using Machine Learning - A Step-by-Step Guide](https://medium.com/@neurocybex/predicting-wine-quality-using-machine-learning-a-step-by-step-guide-aca994bbc128)
+- **Dataset**: [Wine Quality Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv)
+- **GitHub Repository**: [Predicting Wine Quality Based on Chemical Properties](https://github.com/WAJIHAALI1070/100DaysofBytewise/tree/main/Project%20WajihaAli-Week04)
+
+
+
+
 ## Dataset
 The dataset used is the [Wine Quality Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv) sourced from the UCI Machine Learning Repository. It consists of red wine samples with 11 physicochemical properties (features) and a quality rating.
 
@@ -84,16 +95,6 @@ Visualize predicted vs actual wine quality using a scatter plot to understand ho
 
 ## Conclusion
 The predictive model demonstrates effectiveness in estimating wine quality based on chemical properties. Further improvements could involve exploring advanced machine learning models or incorporating additional features for enhanced predictions.
-
-## Additional Resources
-
-- **Medium Article**: [Predicting Wine Quality Using Machine Learning - A Step-by-Step Guide](https://medium.com/@neurocybex/predicting-wine-quality-using-machine-learning-a-step-by-step-guide-aca994bbc128)
-- **Dataset**: [Wine Quality Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv)
-- **GitHub Repository**: [Predicting Wine Quality Based on Chemical Properties](https://github.com/WAJIHAALI1070/100DaysofBytewise/tree/main/Project%20WajihaAli-Week04)
-
-## About the Author
-Wajiha Ali is a passionate data enthusiast and electrical engineering student with a keen interest in machine learning and data science. Connect with her on [GitHub](https://github.com/WAJIHAALI1070) for more projects and collaborations.
-
 
 ## Call to Action
 Explore this project, try out the code, and delve deeper into machine learning for predictive analytics. Your feedback and comments are highly encouraged to foster learning and community engagement in data science.
