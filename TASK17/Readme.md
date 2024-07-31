@@ -23,27 +23,5 @@ This project applies clustering techniques to the Mall Customers dataset to segm
 5. **Visualizing Clusters with PCA**:
    - Use PCA to reduce the dataset's dimensionality and visualize the clusters formed by both K-Means and hierarchical clustering.
 
-## Dataset
 
-The dataset contains information on customers, including:
-
-- CustomerID
-- Gender
-- Age
-- Annual Income (k$)
-- Spending Score (1-100)
-
-## Requirements
-
-- Python 3.x
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- scipy
-
-## How to Run
-
-1. **Clone the repository**:
 
