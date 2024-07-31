@@ -1,1 +1,121 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+from sklearn.decomposition import PCA
+from scipy.cluster.hierarchy import dendrogram, linkage
+from sklearn.cluster import AgglomerativeClustering
+
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+df = pd.DataFrame(X, columns=iris.feature_names)
+df['species'] = y
+
+# Display the first few rows of the dataset
+print(df.head())
+
+# Task 1: Implementing K-Means Clustering
+# Apply K-Means clustering
+kmeans = KMeans(n_clusters=3, random_state=42)
+kmeans.fit(X)
+labels = kmeans.labels_
+
+# Add the cluster labels to the dataframe
+df['cluster'] = labels
+
+# Scatter plot of two features (sepal length and sepal width)
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x=X[:, 0], y=X[:, 1], hue=labels, palette='viridis', legend='full')
+plt.title('K-Means Clustering on Iris Dataset')
+plt.xlabel('Sepal Length')
+plt.ylabel('Sepal Width')
+plt.show()
+
+# Task 2: Choosing the Optimal Number of Clusters
+# Elbow Method
+inertia = []
+for i in range(1, 11):
+    kmeans = KMeans(n_clusters=i, random_state=42)
+    kmeans.fit(X)
+    inertia.append(kmeans.inertia_)
+
+plt.figure(figsize=(10, 6))
+plt.plot(range(1, 11), inertia, marker='o')
+plt.title('Elbow Method')
+plt.xlabel('Number of clusters')
+plt.ylabel('Inertia')
+plt.show()
+
+# Silhouette Score
+silhouette_scores = []
+for n_clusters in range(2, 11):
+    kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+    labels = kmeans.fit_predict(X)
+    silhouette_scores.append(silhouette_score(X, labels))
+
+plt.figure(figsize=(10, 6))
+plt.plot(range(2, 11), silhouette_scores, marker='o')
+plt.title('Silhouette Score Method')
+plt.xlabel('Number of clusters')
+plt.ylabel('Silhouette Score')
+plt.show()
+
+# Task 3: Cluster Visualization with PCA
+# Reduce to two dimensions using PCA
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X)
+
+# K-Means clustering on PCA-reduced data
+kmeans_pca = KMeans(n_clusters=3, random_state=42)
+kmeans_pca.fit(X_pca)
+labels_pca = kmeans_pca.labels_
+
+# Scatter plot of the PCA-reduced data
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=labels_pca, palette='viridis', legend='full')
+plt.title('K-Means Clustering on PCA-Reduced Iris Data')
+plt.xlabel('PCA Component 1')
+plt.ylabel('PCA Component 2')
+plt.show()
+
+# Task 4: Hierarchical Clustering: Dendrogram
+# Hierarchical Clustering
+linked = linkage(X, method='ward')
+
+plt.figure(figsize=(12, 8))
+dendrogram(linked, labels=y)
+plt.title('Dendrogram')
+plt.xlabel('Samples')
+plt.ylabel('Distance')
+plt.show()
+
+# Apply Agglomerative Clustering
+agglo = AgglomerativeClustering(n_clusters=3)
+labels_agglo = agglo.fit_predict(X)
+
+# Scatter plot of Agglomerative Clustering results
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x=X[:, 0], y=X[:, 1], hue=labels_agglo, palette='viridis', legend='full')
+plt.title('Agglomerative Clustering on Iris Dataset')
+plt.xlabel('Sepal Length')
+plt.ylabel('Sepal Width')
+plt.show()
+
+# Task 5: Comparing Clustering Algorithms
+# Compare K-Means and Agglomerative Clustering
+df['kmeans_cluster'] = labels
+df['agglo_cluster'] = labels_agglo
+
+# Print the results
+print("K-Means Clustering Results")
+print(df.groupby('species')['kmeans_cluster'].value_counts())
+print("\nAgglomerative Clustering Results")
+print(df.groupby('species')['agglo_cluster'].value_counts())
+
+# Discussion on strengths and weaknesses
 
