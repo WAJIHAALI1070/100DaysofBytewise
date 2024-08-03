@@ -4,6 +4,7 @@ This repository contains the implementation of customer segmentation using the W
 
 ## Dataset
 
+
 The dataset used is the Wholesale Customers dataset. It contains the annual spending of customers in various categories.
 
 ## Tasks
