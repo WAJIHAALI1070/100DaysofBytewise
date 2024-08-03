@@ -1,5 +1,4 @@
 # Wholesale Customers Segmentation
-
 This repository contains the implementation of customer segmentation using the Wholesale Customers dataset. The tasks include applying K-Means clustering and hierarchical clustering to segment customers based on their annual spending in different categories. The optimal number of clusters is determined using the Elbow Method and Silhouette Score. Additionally, the effectiveness of K-Means and hierarchical clustering is compared.
 
 ## Dataset
