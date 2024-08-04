@@ -21,10 +21,7 @@ Step 6: Compare the clustering results qualitatively (e.g., cluster compactness,
 4. Exploratory Analysis and Insights:
 Step 7: Analyze the clusters in the context of the original features. For each dataset, interpret the clusters to identify any patterns or insights (e.g., customer segments, species differentiation).
 
-Step 8: Explore the impact of different clustering parameters (e.g., number of clusters in K-Means, linkage criteria in Hierarchical Clustering) on the results.
 
 5. Comparison and Reporting:
-Step 9: Compare the effectiveness of K-Means and Hierarchical Clustering across the two datasets. Discuss which algorithm performed better for each dataset and why, considering factors such as data distribution and feature space.
 
-Step 10: Prepare a comprehensive Article summarizing the findings, including visualizations, cluster interpretations, and a comparative analysis of the clustering techniques used. 
 
