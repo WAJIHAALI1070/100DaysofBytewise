@@ -28,28 +28,4 @@ The dataset used is the Wholesale Customers dataset. It contains the annual spen
 - **Objective**: Compare the effectiveness of K-Means and hierarchical clustering.
 - **Discussion**: Discuss the results in terms of cluster cohesion and separation.
 
-## Installation
 
-To run the code, you need to install the required libraries. You can install them using the following command:
-
-```python
-pip install pandas numpy matplotlib seaborn scikit-learn scipy
-```
-### Visualization
-The repository includes visualizations for:
-
-- K-Means Clustering
-- Elbow Method and Silhouette Score
-- Hierarchical Clustering Dendrogram
-- Comparison of K-Means and Hierarchical Clustering
-### Files
-- `customer_segmentation.py`: Python script for performing customer segmentation.
-- `customer_segmentation.ipynb`: Jupyter notebook for performing customer segmentation.
-- `Wholesale customers data.csv`: The Wholesale Customers dataset (you need to place this file in the repository).
-### Results
-The results of the clustering algorithms, along with the visualizations, are included in the repository. The comparisons between K-Means and hierarchical clustering are discussed in terms of cluster cohesion and separation.
-### License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-### Contact
-For any queries or issues, please contact your email.
