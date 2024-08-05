@@ -1,5 +1,4 @@
-
-## Tasks and Procedures
+# Tasks and Procedures
 
 ### 1. Dataset Selection and Initial Analysis
 
