@@ -1,5 +1,4 @@
 # Predicting Wine Quality Based on Chemical Properties
-
 ## Overview
 This project focuses on predicting wine quality based on its chemical properties using machine learning techniques. It employs linear regression to model the relationship between various chemical features and wine quality ratings.
 
