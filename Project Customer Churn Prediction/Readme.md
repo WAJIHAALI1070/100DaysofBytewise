@@ -15,7 +15,7 @@ This project aims to predict customer churn for a telecom company using a machin
 - [How to Run](#how-to-run)
 - [Authors](#authors)
 
-## Introduction
+#Introduction
 
 Customer churn prediction is a vital aspect of customer relationship management (CRM) and is used by businesses to retain valuable customers. In this project, we predict customer churn using a machine learning model based on the Telco Customer Churn dataset. The dataset contains customer demographics, account information, and service usage details.
 
